@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color: #303052;
+    }
+
+    header {
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 7%;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #4d4d72;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+      margin-left: 70px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 10px;
+      transition: .3s;
+    }
+
+    .contact-btn {
+      border: none;
+      color: white;
+      background: linear-gradient(135deg, #5d88bc);
+      padding: 11px 23px;
+      border-radius: 7px;
+      font-size: 10px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(105, 70, 240, .2);
+    }
+
+    .hero {
+      min-height: calc(100vh - 64px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 7% 50px;
+      gap: 40px;
+    }
+
+    .hero-content {
+      width: 47%;
+      padding-left: 12px;
+    }
+
+    .hero-content h1 {
+      font-size: 25px;
+      line-height: 1.1;
+      color: #343452;
+      margin-bottom: 13px;
+      font-weight: 700;
+    }
+
+    .hero-content h1 span {
+      color: #5d88bc;
+    }
+
+    .hero-content p {
+      max-width: 330px;
+      font-size: 9px;
+      line-height: 1.7;
+      color: #85859b;
+      margin-bottom: 17px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 32px;
+      padding: 0 17px;
+      border-radius: 7px;
+      text-decoration: none;
+      font-size: 9px;
+      transition: .3s;
+    }
+
+    .btn-primary {
+      color: #fff;
+      background: linear-gradient(135deg, #5d88bc);
+
+    }
+
+    .btn-secondary {
+      color: #4c59f1;
+      background: #fff;
+      border: 1px solid #eeeaff;
+      box-shadow: 0 4px 12px rgba(80, 65, 130, .05);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .image-wrapper {
+      width: 310px;
+      height: 310px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+   
+
+    @media (max-width: 768px) {
+      header {
+        padding: 0 5%;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 50px 5%;
+      }
+
+      .hero-content {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero-image {
+        width: 10%;
+      }
+
+      .hero-content h1 {
+        font-size: 27px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <div class="logo-icon">str</div>
+      <span>student.</span>
+    </div>
+
+    <nav>
+      <a href="#" class="active">home</a>
+      <a href="#">about</a>
+      <a href="#">portfolio</a>
+ 
+
+   
+    </nav>
+
+    <button class="contact-btn">contact</button>
+  </header>
+
+  <main class="hero">
+    <section class="hero-content">
+      <div class="line"></div>
+      <h1>Im Satria Rupawan,<br><span>
+as a student</span></h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Eius molestiae numquam facilibus enim. Amet velit lectus
+        elementum leo placerat odio. Morbi.
+      </p>
+
+      <div class="buttons">
+       
+  
+      </div>
+    </section>
+
+    <section class="hero-image">
+      <div class="foto">
+        <div class="circle">
+          <div class="circle-inner">
+            
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
