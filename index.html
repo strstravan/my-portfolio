@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
+
   <style>
     * {
       margin: 0;
@@ -12,9 +13,13 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      background: #fff;
-      color: #303052;
+      background: #111;
+      color: #f5f5f5;
     }
 
     header {
@@ -23,17 +28,14 @@
       align-items: center;
       justify-content: space-between;
       padding: 0 7%;
+      background: #313030;
     }
 
     .logo {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      color: #4d4d72;
+      color: #fff;
       font-size: 14px;
       font-weight: 700;
     }
-
 
     nav {
       display: flex;
@@ -43,56 +45,258 @@
     }
 
     nav a {
+      color: #ddd;
       text-decoration: none;
       font-size: 10px;
       transition: .3s;
     }
 
+    nav a:hover,
+    nav a.active {
+      color: #fff;
+    }
+
     .contact-btn {
       border: none;
-      color: white;
-      background: linear-gradient(135deg, #274b77);
+      color: rgb(24, 20, 20);
+      background: #8d8d90;
       padding: 11px 23px;
       border-radius: 7px;
       font-size: 10px;
       cursor: pointer;
-      box-shadow: 0 5px 15px rgba(105, 70, 240, .2);
+      box-shadow: 0 5px 15px rgba(39, 75, 119, .3);
     }
 
+    .hero {
+      min-height: calc(100vh - 64px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px 7%;
+      gap: 50px;
+      background: #111;
+    }
+
+    .hero-text {
+      width: 50%;
+    }
+
+    .hero-text h1 {
+      font-size: 40px;
+      color: #fff;
+      margin-bottom: 15px;
+    }
+
+    .hero-text h1 span {
+      color: #dde1e5;
+    }
+
+    .hero-text p {
+      font-size: 13px;
+      line-height: 1.8;
+      color: #bbb;
+      max-width: 500px;
+      margin-bottom: 25px;
+    }
+
+    .hero-image {
+      width: 40%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .foto {
+      width: 280px;
+      height: 350px;
+      border-radius: 20px;
+      overflow: hidden;
+      background: #222;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, .5);
+      object-fit: cover;
+      display: block;
+    }
+
+    .about {
+      min-height: 100vh;
+      background: #3a3838;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 7%;
+    }
+
+    .about-container {
+      width: 100%;
+      max-width: 1000px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 90px;
+    }
+
+    .about-image img {
+      width: 285px;
+      height: 285px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #a79f9f;
+      display: block;2
+    }
+
+    .about-text {
+      max-width: 500px;
+    }
+
+    .about-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .about-title h2 {
+      color: #fff;
+      font-size: 30px;
+    }
+
+    .about-description {
+      color: #bbb;
+      font-size: 12px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+
+
+    @media (max-width: 768px) {
+      header {
+        padding: 0 5%;
+      }
+
+      nav {
+        margin-left: 0;
+        gap: 15px;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 5%;
+      }
+
+      .hero-text,
+      .hero-image {
+        width: 100%;
+      }
+
+      .hero-text p {
+        margin: 0 auto 25px;
+      }
+
+      .hero-text h1 {
+        font-size: 32px;
+      }
+
+      .foto {
+        width: 280px;
+        height: 350px;
+      }
+
+      .about {
+        padding: 70px 5%;
+      }
+
+      .about-container {
+        flex-direction: column;
+        gap: 50px;
+      }
+
+      .about-image img {
+        width: 220px;
+        height: 220px;
+      }
+
+      .about-text {
+        width: 100%;
+        text-align: center;
+      }
+
+      .about-title h2 {
+        font-size: 26px;
+      }
+
+      .about-line {
+        margin: 20px auto;
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <header>
     <div class="logo">
-      <div class="logo-icon">str</div>
+      str
     </div>
 
     <nav>
       <a href="#" class="active">home</a>
-      <a href="#">about</a>
+      <a href="#about">about</a>
       <a href="#">portfolio</a>
- 
-
-   
     </nav>
 
     <button class="contact-btn">contact</button>
   </header>
 
-      <div class="buttons">
-       
-  
+  <main>
+
+    <section class="hero">
+
+      <div class="hero-text">
+        <h1><span>Satria Rupawan</span></h1>
+
+        <p>
+         A solution-oriented web developer with expertise in building responsive and efficient web applications. Passionate about creating engaging user experiences and optimizing performance.
+        </p>
+
+        <button class="contact-btn">Lihat Portfolio</button>
       </div>
+
+      <div class="hero-image">
+        <img src="/kalcer.png" alt="Foto Profil" class="foto">
+      </div>
+
     </section>
 
-    <section class="hero-image">
-      <div class="foto">
-            
-          </div>
+    <section class="about" id="about">
+
+      <div class="about-container">
+
+        <div class="about-image">
+          <img src="/beuuuh.png" alt="Foto Satria Rupawan">
         </div>
+
+        <div class="about-content">
+
+          <div class="about-title">
+            <h2>About Me</h2>
+          </div>
+
+          <div class="about-text">
+
+            <p class="about-description">
+            lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+            </p>
+
+            <p class="about-description">
+              lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+            </p>
+          </div>
+
+        </div>
+
       </div>
+
     </section>
+
   </main>
 
 </body>
