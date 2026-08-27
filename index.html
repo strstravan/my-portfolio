@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
   <style>
     * {
       margin: 0;
@@ -67,6 +69,11 @@
       box-shadow: 0 5px 15px rgba(39, 75, 119, .3);
     }
 
+    .portfolio-btn {
+      display: inline-block;
+      text-decoration: none;
+    }
+
     .hero {
       min-height: calc(100vh - 64px);
       display: flex;
@@ -117,12 +124,12 @@
     }
 
     .about {
-      min-height: 100vh;
+      min-height: 30vh;
       background: #3a3838;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 80px 7%;
+      padding: 70px 7%;
     }
 
     .about-container {
@@ -140,7 +147,7 @@
       border-radius: 50%;
       object-fit: cover;
       border: 5px solid #a79f9f;
-      display: block;2
+      display: block;
     }
 
     .about-text {
@@ -163,8 +170,78 @@
       line-height: 1.8;
       margin-bottom: 20px;
     }
+    .skills {
+      min-height: 100vh;
+      background: #0d0d0d;
+      color: #111;
+      padding: 75px 6%;
+    }
 
+    .skills-heading {
+      max-width: 1000px;
+      margin: 0 auto 52px;
+    }
 
+    .skills-heading span {
+      display: block;
+      font-size: 14px;
+      color: #fffcfc;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .skills-heading h2 {
+      font-size: 27px;
+      font-weight: 600;
+      color: #fffdfd;
+      text-align: center;
+    }
+
+    .skills-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .skill-card {
+      height: 197px;
+      background: #a6a8a9;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .skill-icon {
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 8px;
+    }
+
+    .skill-icon i {
+      font-size: 58px;
+      color: #222;
+    }
+
+    .skill-card h3 {
+      font-size: 16px;
+      font-weight: 500;
+      color: #111;
+      margin-bottom: 10px;
+    }
+
+    .skill-card p {
+      font-size: 13px;
+      line-height: 1.45;
+      color: #222;
+    }
 
     @media (max-width: 768px) {
       header {
@@ -226,6 +303,27 @@
       .about-line {
         margin: 20px auto;
       }
+
+      .skills {
+        padding: 60px 5%;
+      }
+
+      .skills-heading {
+        margin-bottom: 35px;
+      }
+
+      .skills-heading h2 {
+        font-size: 25px;
+      }
+
+      .skills-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .skill-card {
+        height: 200px;
+      }
     }
   </style>
 </head>
@@ -240,7 +338,7 @@
     <nav>
       <a href="#" class="active">home</a>
       <a href="#about">about</a>
-      <a href="#">portfolio</a>
+      <a href="#portfolio">portfolio</a>
     </nav>
 
     <button class="contact-btn">contact</button>
@@ -251,13 +349,19 @@
     <section class="hero">
 
       <div class="hero-text">
-        <h1><span>Satria Rupawan</span></h1>
+        <h1>
+          <span>Satria Rupawan</span>
+        </h1>
 
         <p>
-         A solution-oriented web developer with expertise in building responsive and efficient web applications. Passionate about creating engaging user experiences and optimizing performance.
+          A solution-oriented web developer with expertise in building responsive
+          and efficient web applications. Passionate about creating engaging
+          user experiences and optimizing performance.
         </p>
 
-        <button class="contact-btn">Lihat Portfolio</button>
+        <a href="#portfolio" class="contact-btn portfolio-btn">
+          Lihat Portfolio
+        </a>
       </div>
 
       <div class="hero-image">
@@ -271,7 +375,7 @@
       <div class="about-container">
 
         <div class="about-image">
-          <img src="/beuuuh.png" alt="Foto Satria Rupawan">
+          <img src="/beuhgggggg.png" alt="Foto Satria Rupawan">
         </div>
 
         <div class="about-content">
@@ -283,13 +387,69 @@
           <div class="about-text">
 
             <p class="about-description">
-            lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+            I'm a senior high school student growing as a programmer — passionate about building clean, responsive web experiences. I work across both frontend and backend using React, TailwindCSS, and JavaScript, and I'm always looking for the next thing to learn and build.
             </p>
 
             <p class="about-description">
-              lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+              lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Quisquam, quod. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Quisquam, quod.
             </p>
+
           </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="skills" id="portfolio">
+
+      <div class="skills-heading">
+        <span>My Skills</span>
+        <h2>My Expertise</h2>
+      </div>
+
+      <div class="skills-container">
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fa-solid fa-futbol"></i>
+          </div>
+
+          <h3>Sports</h3>
+
+          <p>
+            I am able to participate<br>
+            in every sport
+          </p>
+          
+        </div>
+         <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fa-solid fa-book-quran"></i>
+          </div>
+
+          <h3>Reciting Al-Qur'an</h3>
+
+          <p>
+            I can like and can<br>
+            Reciting Al-Qur'an
+          </p>
+        </div>
+           <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fa-solid fa-pen-ruler"></i>
+          </div>
+
+          <h3>Design</h3>
+
+          <p>
+            I can make various<br>
+            specific designs
+          </p>
+        </div>
 
         </div>
 
