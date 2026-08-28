@@ -3,16 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <title>Satria Rupawan | Portfolio</title>
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
 
     html {
@@ -21,88 +25,97 @@
 
     body {
       background: #111;
-      color: #f5f5f5;
+      color: #eee;
     }
 
     header {
-      height: 64px;
+      width: 100%;
+      height: 65px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 7%;
-      background: #313030;
+      padding: 0 8%;
+      background: #292929;
+      position: fixed;
+      top: 0;
+      z-index: 100;
     }
 
     .logo {
-      color: #fff;
-      font-size: 14px;
+      color: white;
+      font-size: 20px;
       font-weight: 700;
+    }
+
+    .logo span {
+      color: #999;
     }
 
     nav {
       display: flex;
-      align-items: center;
-      gap: 27px;
-      margin-left: 70px;
+      gap: 30px;
     }
 
     nav a {
-      color: #ddd;
+      color: #aaa;
       text-decoration: none;
-      font-size: 10px;
+      font-size: 12px;
       transition: .3s;
     }
 
     nav a:hover,
     nav a.active {
-      color: #fff;
+      color: white;
     }
 
     .contact-btn {
+      display: inline-block;
+      padding: 10px 19px;
+      background: #ddd;
+      color: #111;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 11px;
       border: none;
-      color: rgb(24, 20, 20);
-      background: #8d8d90;
-      padding: 11px 23px;
-      border-radius: 7px;
-      font-size: 10px;
       cursor: pointer;
-      box-shadow: 0 5px 15px rgba(39, 75, 119, .3);
+      transition: .3s;
     }
 
-    .portfolio-btn {
-      display: inline-block;
-      text-decoration: none;
+    .contact-btn:hover {
+      background: white;
     }
 
     .hero {
-      min-height: calc(100vh - 64px);
+      min-height: 100vh;
+      padding: 100px 8% 60px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 50px 7%;
       gap: 50px;
       background: #111;
     }
 
     .hero-text {
-      width: 50%;
+      width: 55%;
+    }
+
+    .hero-text small {
+      color: #888;
+      font-size: 12px;
     }
 
     .hero-text h1 {
-      font-size: 40px;
-      color: #fff;
-      margin-bottom: 15px;
-    }
-
-    .hero-text h1 span {
-      color: #dde1e5;
+      font-size: 52px;
+      line-height: 1.15;
+      margin: 15px 0;
+      color: white;
     }
 
     .hero-text p {
+      max-width: 520px;
+      color: #999;
       font-size: 13px;
       line-height: 1.8;
-      color: #bbb;
-      max-width: 500px;
       margin-bottom: 25px;
     }
 
@@ -113,150 +126,178 @@
     }
 
     .foto {
-      width: 280px;
-      height: 350px;
-      border-radius: 20px;
-      overflow: hidden;
-      background: #222;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, .5);
+      width: 290px;
+      height: 370px;
       object-fit: cover;
-      display: block;
+      border-radius: 18px;
+      border: 1px solid #444;
+      background: #222;
     }
 
     .about {
-      min-height: 30vh;
-      background: #3a3838;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 70px 7%;
+      padding: 100px 8%;
+      background: #303030;
     }
 
     .about-container {
-      width: 100%;
       max-width: 1000px;
+      margin: auto;
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 90px;
+      gap: 80px;
+    }
+
+    .about-image {
+      flex-shrink: 0;
     }
 
     .about-image img {
-      width: 285px;
-      height: 285px;
-      border-radius: 50%;
+      width: 250px;
+      height: 250px;
       object-fit: cover;
-      border: 5px solid #a79f9f;
-      display: block;
+      border-radius: 50%;
+      border: 4px solid #666;
     }
 
     .about-text {
-      max-width: 500px;
+      max-width: 550px;
     }
 
-    .about-title {
-      text-align: center;
-      margin-bottom: 35px;
-    }
-
-    .about-title h2 {
-      color: #fff;
-      font-size: 30px;
-    }
-
-    .about-description {
-      color: #bbb;
-      font-size: 12px;
-      line-height: 1.8;
+    .about-text h2 {
+      color: white;
+      font-size: 32px;
       margin-bottom: 20px;
     }
+
+    .about-text p {
+      color: #bbb;
+      font-size: 13px;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+
     .skills {
-      min-height: 100vh;
-      background: #0d0d0d;
-      color: #111;
-      padding: 75px 6%;
+      padding: 100px 8%;
+      background: #111;
     }
 
     .skills-heading {
-      max-width: 1000px;
-      margin: 0 auto 52px;
+      text-align: center;
+      margin-bottom: 50px;
     }
 
-    .skills-heading span {
-      display: block;
-      font-size: 14px;
-      color: #fffcfc;
-      margin-bottom: 8px;
-      text-align: center;
+    .skills-heading small {
+      color: #888;
+      font-size: 12px;
     }
 
     .skills-heading h2 {
-      font-size: 27px;
-      font-weight: 600;
-      color: #fffdfd;
-      text-align: center;
+      font-size: 32px;
+      margin-top: 8px;
+      color: white;
     }
 
     .skills-container {
       max-width: 1000px;
-      margin: 0 auto;
+      margin: auto;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
+      gap: 20px;
     }
 
     .skill-card {
-      height: 197px;
-      background: #a6a8a9;
-      border-radius: 8px;
+      min-height: 220px;
+      padding: 30px 20px;
+      background: #242424;
+      border: 1px solid #333;
+      border-radius: 12px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 20px;
+      transition: .3s;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      border-color: #555;
     }
 
     .skill-icon {
-      height: 70px;
+      width: 65px;
+      height: 65px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 8px;
+      background: #333;
+      border-radius: 12px;
+      margin-bottom: 18px;
     }
 
     .skill-icon i {
-      font-size: 58px;
-      color: #222;
+      font-size: 27px;
+      color: #eee;
     }
 
     .skill-card h3 {
       font-size: 16px;
-      font-weight: 500;
-      color: #111;
-      margin-bottom: 10px;
+      color: white;
+      margin-bottom: 8px;
     }
 
     .skill-card p {
-      font-size: 13px;
-      line-height: 1.45;
-      color: #222;
+      color: #999;
+      font-size: 12px;
+      line-height: 1.6;
     }
 
-    @media (max-width: 768px) {
+    .contact {
+      padding: 90px 8%;
+      text-align: center;
+      background: #303030;
+    }
+
+    .contact h2 {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .contact p {
+      color: #aaa;
+      font-size: 13px;
+      margin-bottom: 25px;
+    }
+
+    footer {
+      padding: 22px 8%;
+      background: #0b0b0b;
+      text-align: center;
+      color: #666;
+      font-size: 11px;
+    }
+
+    @media (max-width: 800px) {
       header {
         padding: 0 5%;
       }
 
       nav {
-        margin-left: 0;
         gap: 15px;
+      }
+
+      nav a {
+        font-size: 10px;
+      }
+
+      header .contact-btn {
+        display: none;
       }
 
       .hero {
         flex-direction: column;
         text-align: center;
-        padding: 50px 5%;
+        padding: 110px 5% 70px;
       }
 
       .hero-text,
@@ -264,65 +305,71 @@
         width: 100%;
       }
 
-      .hero-text p {
-        margin: 0 auto 25px;
-      }
-
       .hero-text h1 {
-        font-size: 32px;
+        font-size: 42px;
       }
 
-      .foto {
-        width: 280px;
-        height: 350px;
+      .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-image {
+        margin-top: 25px;
       }
 
       .about {
-        padding: 70px 5%;
+        padding: 80px 5%;
       }
 
       .about-container {
         flex-direction: column;
-        gap: 50px;
+        text-align: center;
+        gap: 35px;
       }
 
       .about-image img {
-        width: 220px;
-        height: 220px;
+        width: 210px;
+        height: 210px;
       }
 
-      .about-text {
-        width: 100%;
-        text-align: center;
-      }
-
-      .about-title h2 {
-        font-size: 26px;
-      }
-
-      .about-line {
-        margin: 20px auto;
+      .about-text h2 {
+        font-size: 28px;
       }
 
       .skills {
-        padding: 60px 5%;
-      }
-
-      .skills-heading {
-        margin-bottom: 35px;
-      }
-
-      .skills-heading h2 {
-        font-size: 25px;
+        padding: 80px 5%;
       }
 
       .skills-container {
         grid-template-columns: 1fr;
-        gap: 20px;
       }
 
-      .skill-card {
-        height: 200px;
+      .contact h2 {
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 450px) {
+      nav {
+        gap: 10px;
+      }
+
+      nav a {
+        font-size: 9px;
+      }
+
+      .logo {
+        font-size: 17px;
+      }
+
+      .hero-text h1 {
+        font-size: 36px;
+      }
+
+      .foto {
+        width: 250px;
+        height: 320px;
       }
     }
   </style>
@@ -331,41 +378,56 @@
 <body>
 
   <header>
+
     <div class="logo">
-      str
+      str<span>.</span>
     </div>
 
     <nav>
-      <a href="#" class="active">home</a>
-      <a href="#about">about</a>
-      <a href="#portfolio">portfolio</a>
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#portfolio">Skills</a>
     </nav>
 
-    <button class="contact-btn">contact</button>
+    <a href="#contact" class="contact-btn">
+      Contact
+    </a>
+
   </header>
 
   <main>
 
-    <section class="hero">
+    <section class="hero" id="home">
 
       <div class="hero-text">
+
+        <small>Hello, I'm</small>
+
         <h1>
-          <span>Satria Rupawan</span>
+          Satria
+          <span>Rupawan.</span>
         </h1>
 
         <p>
-          A solution-oriented web developer with expertise in building responsive
-          and efficient web applications. Passionate about creating engaging
-          user experiences and optimizing performance.
+          I'm a student who is interested in web development
+          and design. I enjoy learning new things, creating
+          websites, and trying different ideas through projects.
         </p>
 
-        <a href="#portfolio" class="contact-btn portfolio-btn">
-          Lihat Portfolio
+        <a href="#portfolio" class="contact-btn">
+          See My Skills
         </a>
+
       </div>
 
       <div class="hero-image">
-        <img src="/kalcer.png" alt="Foto Profil" class="foto">
+
+        <img
+          src="/asli inii.png"
+          alt="Foto Satria Rupawan"
+          class="foto"
+        >
+
       </div>
 
     </section>
@@ -375,28 +437,31 @@
       <div class="about-container">
 
         <div class="about-image">
-          <img src="/beuhgggggg.png" alt="Foto Satria Rupawan">
+
+          <img
+            src="/beuhgggggg.png"
+            alt="Foto Satria Rupawan"
+          >
+
         </div>
 
-        <div class="about-content">
+        <div class="about-text">
 
-          <div class="about-title">
-            <h2>About Me</h2>
-          </div>
+          <h2>
+            About Me
+          </h2>
 
-          <div class="about-text">
+          <p>
+            I'm a senior high school student who is currently
+            learning programming and web development.
+          </p>
 
-            <p class="about-description">
-            I'm a senior high school student growing as a programmer — passionate about building clean, responsive web experiences. I work across both frontend and backend using React, TailwindCSS, and JavaScript, and I'm always looking for the next thing to learn and build.
-            </p>
-
-            <p class="about-description">
-              lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Quisquam, quod. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Quisquam, quod.
-            </p>
-
-          </div>
+          <p>
+            I like making simple websites, learning about
+            frontend development, and improving my design skills.
+            I believe that every project is a chance to learn
+            something new.
+          </p>
 
         </div>
 
@@ -407,49 +472,70 @@
     <section class="skills" id="portfolio">
 
       <div class="skills-heading">
-        <span>My Skills</span>
-        <h2>My Expertise</h2>
+
+        <small>
+          Things I Enjoy
+        </small>
+
+        <h2>
+          My Skills
+        </h2>
+
       </div>
 
       <div class="skills-container">
 
         <div class="skill-card">
+
           <div class="skill-icon">
             <i class="fa-solid fa-futbol"></i>
           </div>
 
-          <h3>Sports</h3>
+          <h3>
+            Sports
+          </h3>
 
           <p>
-            I am able to participate<br>
-            in every sport
+            I enjoy playing and
+            participating in different
+            kinds of sports.
           </p>
-          
+
         </div>
-         <div class="skill-card">
+
+        <div class="skill-card">
+
           <div class="skill-icon">
             <i class="fa-solid fa-book-quran"></i>
           </div>
 
-          <h3>Reciting Al-Qur'an</h3>
+          <h3>
+            Reciting Al-Qur'an
+          </h3>
 
           <p>
-            I can like and can<br>
-            Reciting Al-Qur'an
+            I enjoy learning and
+            improving my Al-Qur'an
+            recitation.
           </p>
+
         </div>
-           <div class="skill-card">
+
+        <div class="skill-card">
+
           <div class="skill-icon">
             <i class="fa-solid fa-pen-ruler"></i>
           </div>
 
-          <h3>Design</h3>
+          <h3>
+            Design
+          </h3>
 
           <p>
-            I can make various<br>
-            specific designs
+            I like creating simple
+            designs and experimenting
+            with different ideas.
           </p>
-        </div>
 
         </div>
 
@@ -457,7 +543,12 @@
 
     </section>
 
-  </main>
+  
+
+  <footer>
+    © 2026 Satria Rupawan. All rights reserved.
+  </footer>
+
 
 </body>
 </html>
